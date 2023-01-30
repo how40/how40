@@ -6,32 +6,34 @@
   <title>how40</title>
 <style>
   body {
-    background-color: coral;
+    background: linear-gradient(to bottom, #ff7f50 46%, #ff5050 100%);
+    background-attachment: fixed;
     color:cornflowerblue;
   }
   #all {
-    width:600px;
-    height:250px;
+    width:430px;
+    height:270px;
     padding:10px;
-    font-family:Arial, Helvetica, sans-serif
+    font-family:sans-serif;
+    position: absolute;
   }
   #main {
-    height: 150px;
-    width: 600px;
+    height: 170px;
+    width: 400px;
     background-color: aliceblue;
-    padding: 10px
-  }
-  h1 {
-    text-shadow: 1px 1px aliceblue;
-    font-weight: bold;
-    margin:0px;
+    padding: 10px;
+    box-shadow: 10px 10px;
 
   }
-  #title {
+  h1 {
+    margin:0px;
+  }
+  #allheader {
     margin-top:0px;
     padding: 10px;
     background-color: antiquewhite;
-    width:600px;
+    width:400px;
+    box-shadow: 10px 10px;
   }
   ul {
     list-style-type: "> ";
@@ -53,7 +55,7 @@
  
   <div id = 'all'>
    
-    <div id="title">
+    <div id="allheader">
       <h1>henry wilson</h1>
       <span><i>a place for projects and things</i></span>
     </div>
@@ -68,11 +70,57 @@
         </ul>
       </div>
 
-      <p><br>Like what you see? <a class="box" href='https://github.com/how40'>github</a> | <a class="box" href='https://www.linkedin.com/in/how40/'>linkedin</a> | <a class="box" href='mailto:how40@pitt.edu'>email</a></p>
+      <p><br>Like what you see?  <a class="box" href='https://github.com/how40'>github</a> | <a class="box" href='https://www.linkedin.com/in/how40/'>linkedin</a> | <a class="box" href='mailto:how40@pitt.edu'>email</a></p>
+    <span style="font-size:12px"><i>psst! click the header and drag it to move this whole thing!</i></span>
     </div>
-
-  
   </div>
+
+  <script>
+    //Make the DIV element draggagle:
+    dragElement(document.getElementById("all"));
+    
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      if (document.getElementById(elmnt.id + "header")) {
+        /* if present, the header is where you move the DIV from:*/
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+      } else {
+        /* otherwise, move the DIV from anywhere inside the DIV:*/
+        elmnt.onmousedown = dragMouseDown;
+      }
+    
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+      }
+    
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      }
+    
+      function closeDragElement() {
+        /* stop moving when mouse button is released:*/
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+    </script>
+    
 
 </body>
 </html>
