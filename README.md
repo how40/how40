@@ -1,4 +1,5 @@
-Hi
+Hello! I hope you are doing well.
+I am working on my personal site right now.
 
 <!--
 **how40/how40** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
