@@ -32,13 +32,24 @@ h1 {
 ul {
   list-style-type: "> ";
 }
+a.box:hover, a.box:active {color:aliceblue; background:cornflowerblue;}   
+a:link{
+  color: cornflowerblue; /* #99ccff; */
+}
+a:visited {
+  color: cornflowerblue; /* #cc99ff; */
+}
+a {
+  text-decoration: none;
+}
+
 </style>
 <body>
  
   <div id = 'all'>
    
     <div id="title">
-      <h1>henry's site</h1>
+      <h1>henry wilson</h1>
       <span><i>a place for projects and things</i></span>
     </div>
 
@@ -47,12 +58,12 @@ ul {
     
       <div id="links">
         <ul>
-          <li><a href="">about me</a></li>
-          <li><a href="">my projects</a></li>
+          <li><a class="box" href="h">about me</a></li>
+          <li><a class='box' href="">my projects</a></li>
         </ul>
       </div>
 
-      <p><br>Like what you see? <a href='https://github.com/how40'>github</a>|<a href='https://www.linkedin.com/in/how40/'>linkedin</a>|<a href='mailto:how40@pitt.edu'>email</a></p>
+      <p><br>Like what you see? <a class="box" href='https://github.com/how40'>github</a> | <a class="box" href='https://www.linkedin.com/in/how40/'>linkedin</a> | <a class="box" href='mailto:how40@pitt.edu'>email</a></p>
     </div>
 
   
