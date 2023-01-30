@@ -10,6 +10,13 @@
     background-attachment: fixed;
     color:cornflowerblue;
   }
+
+  #parent {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+  }
+
   #all {
     width:430px;
     height:270px;
@@ -52,26 +59,27 @@
 </style>
 </head>
 <body>
- 
-  <div id = 'all'>
-   
-    <div id="allheader">
-      <h1>henry wilson</h1>
-      <span><i>a place for projects and things</i></span>
-    </div>
-
-    <div id="main">
-      <p>Hello and welcome!</p>
+  <div id="parent">
+    <div id = 'all'>
     
-      <div id="links">
-        <ul>
-          <li><a class="box" href="">about me</a></li>
-          <li><a class='box' href="">my projects</a></li>
-        </ul>
+      <div id="allheader">
+        <h1>henry wilson</h1>
+        <span><i>a place for projects and things</i></span>
       </div>
 
-      <p><br>Like what you see?  <a class="box" href='https://github.com/how40'>github</a> | <a class="box" href='https://www.linkedin.com/in/how40/'>linkedin</a> | <a class="box" href='mailto:how40@pitt.edu'>email</a></p>
-    <span style="font-size:12px"><i>psst! click the header and drag it to move this whole thing!</i></span>
+      <div id="main">
+        <p>Hello and welcome!</p>
+      
+        <div id="links">
+          <ul>
+            <li><a class="box" href="">about me</a></li>
+            <li><a class='box' href="">my projects</a></li>
+          </ul>
+        </div>
+
+        <p><br>Like what you see?  <a class="box" href='https://github.com/how40'>github</a> | <a class="box" href='https://www.linkedin.com/in/how40/'>linkedin</a> | <a class="box" href='mailto:how40@pitt.edu'>email</a></p>
+      <span style="font-size:12px"><i>psst! click the header and drag it to move this whole thing!</i></span>
+      </div>
     </div>
   </div>
 
@@ -119,7 +127,7 @@
         document.onmousemove = null;
       }
     }
-    </script>
+  </script>
     
 
 </body>
