@@ -1,6 +1,8 @@
 Hello! I hope you are doing well.
 I am working on my personal site right now.
 
+[You can click right here to see it in action.](https://how40.github.io/)
+
 <!--
 **how40/how40** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
