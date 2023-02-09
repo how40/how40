@@ -12,20 +12,20 @@
     color:cornflowerblue;
   }
 
-  #parent {
+  #parent { /* where everything is put */
     display: grid;
-    /*place-items: center;*/
+    place-items: center;
     height: 100vh;
   }
 
-  #all {
+  #all { /* the entirety of the 'box' that content is put into */
     max-width:430px;
     max-height:270px;
     padding:10px;
     font-family:sans-serif;
-    position: absolute;
+    position: relative;
   }
-  .main {
+  .main {  /* where the meat of the box is; text is put in here */
     max-height: 200px;
     max-width: 400px;
     background-color: aliceblue;
@@ -36,7 +36,7 @@
   h1 {
     margin:0px;
   }
-  #allheader {
+  #allheader {  /* the header of the box; where it is dragged from */
     margin-top:0px;
     padding: 15px;
     background-color: antiquewhite;
@@ -46,7 +46,8 @@
   ul {
     list-style-type: "> ";
   }
-  a.box:hover, a.box:active {color:aliceblue; background:cornflowerblue;}   
+
+  a.box:hover, a.box:active {color:aliceblue; background:cornflowerblue;}  /* links changing colors when you hover over them -- 'box' being the highlighted background */
   a:link{
     color: cornflowerblue; /* #99ccff; */
   }
@@ -56,7 +57,6 @@
   a {
     text-decoration: none;
   }
-
 
   #about {
     display: none;
@@ -131,11 +131,6 @@
     </div>
 
   </div> <!--END PARENT-->
-
-
-
-
-    
 
 </body>
 </html>
