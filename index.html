@@ -6,6 +6,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <title>Henry Wilson - coder, designer, tinkerer</title>
 <style>
+
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     background: linear-gradient(to bottom, #ff7f50 46%, #ff5050 100%);
     background-attachment: fixed;
@@ -14,7 +19,7 @@
 
   #parent { /* where everything is put */
     display: grid;
-    place-items: center;
+    place-items:center;
     height: 100vh;
   }
 
@@ -60,10 +65,12 @@
 
   #about {
     display: none;
+    position:inherit;
   }
 
   #projects {
     display: none;
+    position:inherit;
   }
 
 </style>
@@ -98,7 +105,7 @@
 
     
     
-    <div id="about" class="animate__animated animate__slideInLeft">
+    <div id="about" class="animate__animated animate__slideInRight">
       <div id="all">
         
         <div id="allheader">
