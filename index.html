@@ -30,9 +30,14 @@
     font-family:sans-serif;
     position: relative;
   }
+
+  #about .main {
+    max-height: 350px;
+  }
   .main {  /* where the meat of the box is; text is put in here */
     max-height: 200px;
     max-width: 400px;
+    overflow:auto;
     background-color: aliceblue;
     padding: 15px;
     box-shadow: 10px 10px;
@@ -65,12 +70,14 @@
 
   #about {
     display: none;
-    position:inherit;
+    position:absolute;
+    right: 30px;
   }
 
   #projects {
     display: none;
-    position:inherit;
+    position:absolute;
+    left:10%;
   }
 
 </style>
@@ -114,7 +121,9 @@
         </div>
 
         <div class="main">
-          <p>My name is Henry Wilson and I love to walk, talk, etc. </p>
+          <p>My name is Henry Wilson and I am a fan of creating things -- be it websites, videos, music, or art. Experienced in Java, Python, HTML, and CSS, I enjoy spending time on both ends of development. I find particular enjoyment on the UI/UX front -- as such, I'm majoring in <u><a class="box" href="https://www.sci.pitt.edu/academics/undergraduate-majors/digital-narrative-and-interactive-design">Digital Narrative and Interactive Design</a></u> at the University of Pittsburgh (with a CS minor).</p>
+          <p>In my free time, I am fascinated with obsolete technology -- turntables, cassette decks, miniDV camcorders, and old video game consoles. The way old technology can be used to both evoke nostalgia of old and tell new stories is an interest I chase through my multimedia project, <u><a class="box" href="https://dimwit.neocities.org/">dimwit</a> </u>.(note: some swearing and adult content)</p>
+
         </div>
 
       </div>
