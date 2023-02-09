@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.00">
-  <title>how40</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <title>Henry Wilson - coder, designer, tinkerer</title>
 <style>
   body {
     background: linear-gradient(to bottom, #ff7f50 46%, #ff5050 100%);
@@ -13,7 +14,7 @@
 
   #parent {
     display: grid;
-    place-items: center;
+    /*place-items: center;*/
     height: 100vh;
   }
 
@@ -24,7 +25,7 @@
     font-family:sans-serif;
     position: absolute;
   }
-  #main {
+  .main {
     max-height: 200px;
     max-width: 400px;
     background-color: aliceblue;
@@ -56,34 +57,83 @@
     text-decoration: none;
   }
 
+
+  #about {
+    display: none;
+  }
+
+  #projects {
+    display: none;
+  }
+
 </style>
 </head>
+
 <body>
   <div id="parent">
-    <div id = 'all'>
-    
-      <div id="allheader">
-        <h1>Henry Wilson</h1>
-        <span><i>a place for projects and things</i></span>
-      </div>
-
-      <div id="main">
-        <p>Hello and welcome!</p>
+    <div id="home">
       
-        <div id="links">
-          <ul>
-            <li><a class="box" href="">about me</a></li>
-            <li><a class='box' href="">my projects</a></li>
-          </ul>
+      <div id = 'all'> <!--MAIN BLOCK -->
+      
+        <div id="allheader">
+          <h1>Henry Wilson</h1>
+          <span><i>a place for projects and things</i></span>
         </div>
 
-        <p><br>Like what you see?  <a class="box" href='https://github.com/how40'>github</a> | <a class="box" href='https://www.linkedin.com/in/how40/'>linkedin</a> | <a class="box" href='mailto:how40@pitt.edu'>email</a></p>
-      <span style="font-size:12px"><i>psst! click the header and drag it to move this whole thing!</i></span>
-      <br><center><span style="font-size:12px"><i>(desktop only)</i></span></center>
+        <div class="main">
+          <p>Hello and welcome!</p>
+        
+          <div id="links">
+            <ul>
+              <li><a class="box" onclick="document.getElementById('about').style.display='block'">about me</a></li>
+              <li><a class='box' onclick="document.getElementById('projects').style.display='block'">my projects</a></li>
+            </ul>
+          </div>
+
+          <p><br>Like what you see?  <a class="box" href='https://github.com/how40'>github</a> | <a class="box" href='https://www.linkedin.com/in/how40/'>linkedin</a> | <a class="box" href='mailto:how40@pitt.edu'>email</a></p>
+        <span style="font-size:12px"><i>psst! click the header and drag it to move this whole thing!</i></span>
+        <br><center><span style="font-size:12px"><i>(desktop only)</i></span></center>
+
+        </div>
+      </div> <!--END MAIN BLOCK-->
+    </div>
+
+    
+    
+    <div id="about" class="animate__animated animate__slideInLeft">
+      <div id="all">
+        
+        <div id="allheader">
+          <h1>About</h1>
+          <span><i>self explanatory</i></span>
+        </div>
+
+        <div class="main">
+          <p>My name is Henry Wilson and I love to walk, talk, etc. </p>
+        </div>
+
+      </div>
+      </div>
+
+    <div id="projects" class="animate__animated animate__slideInLeft">
+      <div id="all">
+        
+        <div id="allheader">
+          <h1>My Projects</h1>
+          <span><i>On the internet!</i></span>
+        </div>
+
+        <div class ='main'>
+          <p>Here are some of the projects I have done:</p>
+        </div>
 
       </div>
     </div>
-  </div>
+
+  </div> <!--END PARENT-->
+
+
+
 
   <script>
     //Make the DIV element draggagle:
@@ -129,6 +179,8 @@
         document.onmousemove = null;
       }
     }
+
+
   </script>
     
 
